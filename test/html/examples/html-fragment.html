@@ -9,11 +9,14 @@
     </div>
 </article>
 <script>
-    var example = document.getElementById('html-fragment-example');
+    var root = getRoot();
+    
+    var example = root.getElementById('html-fragment-example');
     example.classList.add('is-success');
     example.classList.remove('is-danger');
 
     var button = example.getElementsByTagName('button')[0];
+    
     button.addEventListener('click', function () {
         button.classList.toggle('is-success');
     });
